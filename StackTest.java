@@ -22,7 +22,7 @@ public class StackTest {
         stack.push(80);
         stack.push(90);
         stack.push(100);
-        assertEquals(stack.last.previous, stack.last.getPrevious());
+        assertEquals(Integer.valueOf(90), stack.last.getPrevious().getValue());
 
     }
 
