@@ -51,4 +51,29 @@ public class StackTest {
         assertNull(stack.last.getValue());
     }
 
+    @Test
+    public void ItShouldAddTwoValues() {
+        assertEquals(Integer.valueOf(80), stack.operation('+', 50, 30));
+    }
+
+    @Test
+    public void ItShouldSubstractTwoValues() {
+        assertEquals(Integer.valueOf(20), stack.operation('-', 50, 30));
+    }
+
+    @Test
+    public void ItShouldMultiplyTwoValues() {
+        assertEquals(Integer.valueOf(1500), stack.operation('*', 50, 30));
+    }
+
+    @Test
+    public void ItShouldDivideTwoValues() {
+        assertEquals(Integer.valueOf(6), stack.operation('/', 18, 3));
+    }
+
+    @Test
+    public void ItShouldPerformTheOperationModulo() {
+        assertEquals(Integer.valueOf(1), stack.operation('%', 10, 3));
+    }
+
 }
