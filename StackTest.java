@@ -12,6 +12,7 @@ public class StackTest {
 
     @Test
     public void ItShouldPopTheLastElement() {
+        stack.push(10);
         stack.push(1);
         int result = stack.pop();
         assertEquals(1, result);
