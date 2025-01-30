@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,6 +30,10 @@ public class StackTest {
 
     @Test
     public void WhenItPopsLastElementIsThePreviousOne() {
+        stack.push(70);
+        stack.push(90);
+        stack.pop();
+        assertEquals(Integer.valueOf(70), stack.last.getValue());
 
     }
 
@@ -36,6 +42,13 @@ public class StackTest {
         stack.push(80);
         int result = stack.pop();
         assertEquals(80, result);
+    }
+
+    @Test
+    public void IfLastIsNullThrowException() {
+        stack.push(80);
+        stack.pop();
+        assertNull(stack.last.getValue());
     }
 
 }
