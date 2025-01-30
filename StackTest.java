@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,16 +7,15 @@ public class StackTest {
     private Stack<Integer> stack;
 
     @Before
-    void SetStack() {
+    public void SetStack() {
         stack = new Stack<>();
     }
 
     @Test
     public void ItShouldPopTheLastElement() {
-        stack.push(10);
-        stack.push(1);
+        stack.push(80);
         int result = stack.pop();
-        assertEquals(1, result);
+        assertEquals(80, result);
     }
 
 }
