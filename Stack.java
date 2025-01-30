@@ -1,18 +1,13 @@
 public class Stack<T> implements IStack<T> {
-    Node<T> first = null;
-    Node<T> last = null;
+    Node<T> first = new Node<>(null);
+    Node<T> last = first;
 
     @Override
     public void push(T value) {
-        if (last == null) {
-            first = new Node<>(value);
-            last = first;
-        } else {
             last.setNext(new Node<>(value));
             Node<T> aux = last;
             last = last.getNext();
             last.setPrevious(aux);
-        }
     }
 
     @Override
