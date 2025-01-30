@@ -12,6 +12,26 @@ public class StackTest {
     }
 
     @Test
+    public void ItShouldPushaNewElementtotheStackandAssignedAsLastElement() {
+        stack.push(80);
+        assertEquals(Integer.valueOf(80), stack.last.getValue());
+    }
+
+    @Test
+    public void ItShouldGetPreviousElement() {
+        stack.push(80);
+        stack.push(90);
+        stack.push(100);
+        assertEquals(stack.last.previous, stack.last.getPrevious());
+
+    }
+
+    @Test
+    public void WhenItPopsLastElementIsThePreviousOne() {
+
+    }
+
+    @Test
     public void ItShouldPopTheLastElement() {
         stack.push(80);
         int result = stack.pop();
