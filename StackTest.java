@@ -1,5 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -74,6 +75,16 @@ public class StackTest {
     @Test
     public void ItShouldPerformTheOperationModulo() {
         assertEquals(Integer.valueOf(1), stack.operation('%', 10, 3));
+    }
+
+    @Test
+    public void ItShouldThrowExceptionWhenItDividingByZero() {
+        assertThrows(ArithmeticException.class, () -> stack.operation('/', 80, 0));
+    }
+
+    @Test
+    public void ItShouldThrowExceptionWhenItsAIllegalArgumentOperatior() {
+        assertThrows(IllegalArgumentException.class, () -> stack.operation('x', 4, 2));
     }
 
 }
