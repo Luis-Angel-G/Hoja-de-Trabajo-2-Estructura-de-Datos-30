@@ -4,15 +4,7 @@ public class Node<T> {
     T value;
 
     public Node(T value) {
-        this.next = null;
-        this.previous = null;
         this.value = value;
-    }
-
-    public Node() {
-        this.next = null;
-        this.previous = null;
-        this.value = null;
     }
 
     public Node<T> getNext() {
