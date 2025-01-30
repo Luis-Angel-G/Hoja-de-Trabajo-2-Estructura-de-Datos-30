@@ -1,11 +1,13 @@
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class StackTest {
 
     private Stack<Integer> stack;
 
-    @BeforeEach
+    @Before
     void SetStack() {
         stack = new Stack<>();
     }
