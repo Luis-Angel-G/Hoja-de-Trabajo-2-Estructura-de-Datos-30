@@ -4,10 +4,10 @@ public class Stack<T> implements IStack<T> {
 
     @Override
     public void push(T value) {
-            last.setNext(new Node<>(value));
-            Node<T> aux = last;
-            last = last.getNext();
-            last.setPrevious(aux);
+        last.setNext(new Node<>(value));
+        Node<T> aux = last;
+        last = last.getNext();
+        last.setPrevious(aux);
     }
 
     @Override
