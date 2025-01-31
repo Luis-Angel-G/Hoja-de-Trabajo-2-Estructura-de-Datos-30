@@ -7,6 +7,9 @@ public class Node<T> {
         this.value = value;
     }
 
+    public Node() {
+    }
+
     public Node<T> getNext() {
         return next;
     }
