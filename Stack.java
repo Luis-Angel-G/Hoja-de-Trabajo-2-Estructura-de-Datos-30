@@ -1,4 +1,8 @@
 /**
+ * Se intercambio la clase Stack con el grupo 6, donde se encuentra Alejandra Avilés.
+ */
+
+/**
  * La clase Stack implementa la interfaz IStack.
  * @Project : Hoja de trabajo 2
  * @author Luis Girón
